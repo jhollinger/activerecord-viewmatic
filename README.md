@@ -36,7 +36,7 @@ class AddMyNewViews < ActiveRecord::Migration
 
   def down
     drop_view :reticulated_splines
-    drop_view :pending_orders
+    drop_view :pending_orders, materialized: true
   end
 end
 ```

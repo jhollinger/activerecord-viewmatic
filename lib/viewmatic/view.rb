@@ -7,10 +7,11 @@ module Viewmatic
     # Initialize a new view.
     #
     # @param name [Symbol] name of the view as it will appear in the database
+    # @param materialized [Boolean] true if this is to be a materialized view
     #
-    def initialize(name)
+    def initialize(name, materialized: false)
       @name = name
-      @materialized = false
+      @materialized = materialized
     end
 
     # Get/set the view name
