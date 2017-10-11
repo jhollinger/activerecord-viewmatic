@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version = Viewmatic::VERSION
   s.licenses = ['MIT']
   s.summary = "An easy way to use database views in ActiveRecord"
-  s.description = "Helpers for using live and materialized views ActiveRecord"
+  s.description = "Helpers for using live and materialized views in ActiveRecord"
   s.date = '2017-10-10'
   s.authors = ['Jordan Hollinger']
   s.email = 'jordan.hollinger@gmail.com'
