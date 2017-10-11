@@ -7,7 +7,9 @@ Helpers for ActiveRecord apps that want to use database views easily. Both live 
 3. Use migrations to create or drop the defined views. (Your views will be automatically created when you run commands like `rake db:setup` and `rake db:test:prepare`.)
 4. Define ActiveRecord models to access your views.
 
-## Defining your views
+## Define your views
+
+**db/views.rb**
 
 ```ruby
 Viewmatic::Schema.define do
