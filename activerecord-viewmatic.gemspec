@@ -3,8 +3,8 @@ require_relative 'lib/viewmatic/version'
 Gem::Specification.new do |s|
   s.name = 'activerecord-viewmatic'
   s.version = Viewmatic::VERSION
-  s.licenses = []
-  s.summary = "Helpers for using views in ActiveRecord"
+  s.licenses = ['MIT']
+  s.summary = "An easy way to use database views in ActiveRecord"
   s.description = "Helpers for using live and materialized views ActiveRecord"
   s.date = '2017-10-10'
   s.authors = ['Jordan Hollinger']
