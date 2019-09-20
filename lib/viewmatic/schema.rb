@@ -8,12 +8,12 @@ module Viewmatic
       attr_reader :paths
     end
 
+    db_dir = begin
+               ActiveRecord::Tasks::DatabaseTasks.db_dir
+             rescue NameError
+               "./db"
+             end
     @paths = [
-      db_dir = begin
-                 ActiveRecord::Tasks::DatabaseTasks.db_dir
-               rescue NameError
-                 "./db"
-               end
       File.join(db_dir, 'views.rb'),
       File.join(db_dir, 'views', '*.rb'),
     ]
