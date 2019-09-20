@@ -9,8 +9,13 @@ module Viewmatic
     end
 
     @paths = [
-      File.join(ActiveRecord::Tasks::DatabaseTasks.db_dir, 'views.rb'),
-      File.join(ActiveRecord::Tasks::DatabaseTasks.db_dir, 'views', '*.rb'),
+      db_dir = begin
+                 ActiveRecord::Tasks::DatabaseTasks.db_dir
+               rescue NameError
+                 "./db"
+               end
+      File.join(db_dir, 'views.rb'),
+      File.join(db_dir, 'views', '*.rb'),
     ]
 
     #
